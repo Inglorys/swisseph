@@ -1,6 +1,6 @@
 FROM node:16-alpine
 
-# Install system dependencies
+# Install system dependencies including curl
 RUN apk add --no-cache \
     build-base \
     python3 \
@@ -8,7 +8,8 @@ RUN apk add --no-cache \
     gcc \
     g++ \
     libc-dev \
-    linux-headers
+    linux-headers \
+    curl
 
 WORKDIR /app
 
@@ -23,7 +24,7 @@ COPY . .
 
 EXPOSE 3000
 
-# Add healthcheck
+# Add healthcheck using curl
 HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:3000/health || exit 1
 
