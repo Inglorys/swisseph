@@ -1,7 +1,7 @@
 {
   "name": "swisseph",
   "version": "1.0.0",
-  "description": "Swiss Ephemeris Node.js wrapper",
+  "description": "Swiss Ephemeris Node.js wrapper (Demo Mode)",
   "main": "server.js",
   "license": "AGPL-3.0",
   "scripts": {
@@ -11,9 +11,7 @@
   "dependencies": {
     "express": "^4.18.0",
     "cors": "^2.8.5",
-    "body-parser": "^1.20.0",
-    "ffi-napi": "^4.0.3",
-    "ref-napi": "^3.0.3"
+    "body-parser": "^1.20.0"
   },
   "engines": {
     "node": ">=16.0.0"
